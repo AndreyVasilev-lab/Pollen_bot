@@ -155,6 +155,8 @@ def start(message):
     markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
     button = types.KeyboardButton('📍Отправить местоположение',request_location=True)
     markup.add(button)
+    button_city = types.KeyboardButton('🏙️Введите город',request_location=True)
+    markup.add(button_city)
     bot.send_message(message.chat.id, "🌿 Привет! Я бот, который показывает уровень пыльцы в твоём регионе.\n"
         "Нажми кнопку ниже, чтобы я определил твоё местоположение:", reply_markup = markup)
 
